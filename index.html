@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+                background: green;
+                color: white;
+            }
+            div#view {
+                margin: 50px auto 50px auto;
+                padding: 5px;
+                width: 300px;
+                text-align: center;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                background-color: transparent;
+                box-shadow: 2px 2px 4px 2px;
+            }
+            div#view h2 {
+                color:green;
+                padding: 2px;
+            }
+            div#view h3#counterView {
+                color: green;
+            }
+            div#view div#controls {
+                padding: 5px;
+                display:contents;
+            }
+            div#view div#controls button {
+                width: 32%;
+                background-color: transparent;
+                border: 3px green solid;
+                border-radius: 5px;
+                font-size: large;
+            }
+        </style>
+        <script>
+            var counter = 0
+            function incrementCounter() {
+                document.getElementById("counterView").innerHTML = ++counter
+            }
+            function decrementCounter() {
+                document.getElementById("counterView").innerHTML = --counter
+            }
+            function resetCounter() {
+                counter = 0
+                document.getElementById("counterView").innerHTML = counter
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>COUNTER WITH VANILLA JAVASCRIPT</h1>
+        </header>
+        <body>
+            <div id="view">
+                <h2>Counter</h2>
+                <h3 id="counterView">0</h3>
+                <div id="controls">
+                    <button type="button" onclick="decrementCounter()">Decrease</button>
+                    <button type="button" onclick="resetCounter()">Reset</button>
+                    <button type="button" onclick="incrementCounter()">Increase</button>
+                </div>
+            </div>
+        </body>
+    </body>
+</html>
